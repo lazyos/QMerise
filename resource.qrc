@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>img/Créer un nouveau-48.png</file>
+        <file>img/Dossier ouvert-48.png</file>
+        <file>img/Enregistrer sous-48.png</file>
+        <file>img/Sauvegarder-48.png</file>
+        <file>img/Exit-48.png</file>
+        <file>img/Line-48.png</file>
+        <file>img/Mcd-48.png</file>
+        <file>img/Table-48.png</file>
+    </qresource>
+</RCC>
