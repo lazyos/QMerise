@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -8,8 +7,12 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    // Create managers
+    this->projectManager = new ProjectManager(this->ui->projectView, this);
+
     // Connections of toolbar's items
-    QObject::connect(ui->actionNew_project, &QAction::triggered, this, &MainWindow::createNewProject);
+    QObject::connect(ui->actionNew_project, &QAction::triggered, this, &MainWindow::openNewProjectDialog);
+    QObject::connect(ui->actionOpen_project, &QAction::triggered, this->projectManager, &ProjectManager::chooseProject);
 }
 
 MainWindow::~MainWindow()
@@ -17,7 +20,15 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::createNewProject()
+/**
+ * Open the project dialog to create a new project
+ * @brief MainWindow::openNewProjectDialog
+ */
+void MainWindow::openNewProjectDialog()
 {
-    qDebug() << "Wow ! I can create a new project !";
+    qDebug() << "MainWindow::openNewProjectDialog";
+
+    DialogCreateProject *dialogCreateProject = new DialogCreateProject(this->projectManager, this);
+    dialogCreateProject->setModal(true);
+    dialogCreateProject->exec();
 }

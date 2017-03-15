@@ -24,11 +24,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    projectmanager.cpp \
+    dialogcreateproject.cpp \
+    filemanager.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    projectmanager.h \
+    dialogcreateproject.h \
+    filemanager.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    dialogcreateproject.ui
 
 RESOURCES += \
     resource.qrc
