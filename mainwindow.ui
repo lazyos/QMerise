@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>813</width>
+    <width>860</width>
     <height>586</height>
    </rect>
   </property>
@@ -130,7 +130,7 @@
       <widget class="QWidget" name="gridLayoutWidget_2">
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
-         <widget class="QOpenGLWidget" name="drawingZone">
+         <widget class="DrawingZone" name="drawingZone">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -162,7 +162,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>813</width>
+     <width>860</width>
      <height>19</height>
     </rect>
    </property>
@@ -198,6 +198,7 @@
    <addaction name="actionSave"/>
    <addaction name="actionSave_as"/>
    <addaction name="separator"/>
+   <addaction name="actionEntity"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNew_project">
@@ -266,8 +267,27 @@
     <string>Ctrl+Q</string>
    </property>
   </action>
+  <action name="actionEntity">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/rec/img/Table-48.png</normaloff>:/rec/img/Table-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Entity</string>
+   </property>
+   <property name="toolTip">
+    <string>Entity</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>DrawingZone</class>
+   <extends>QOpenGLWidget</extends>
+   <header>drawingzone.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resource.qrc"/>
  </resources>

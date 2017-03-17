@@ -27,12 +27,14 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     projectmanager.cpp \
     dialogcreateproject.cpp \
-    filemanager.cpp
+    filemanager.cpp \
+    drawingzone.cpp
 
 HEADERS  += mainwindow.h \
     projectmanager.h \
     dialogcreateproject.h \
-    filemanager.h
+    filemanager.h \
+    drawingzone.h
 
 FORMS    += mainwindow.ui \
     dialogcreateproject.ui
